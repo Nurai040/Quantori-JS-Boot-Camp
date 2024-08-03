@@ -45,29 +45,28 @@ $ yarn run start:dev
 $ yarn run start:prod
 ```
 
-## Test
-
-```bash
-# unit tests
-$ yarn run test
-
-# e2e tests
-$ yarn run test:e2e
-
-# test coverage
-$ yarn run test:cov
-```
-
-## Support
-
-Nest is an MIT-licensed open source project. It can grow thanks to the sponsors and support by the amazing backers. If you'd like to join them, please [read more here](https://docs.nestjs.com/support).
-
-## Stay in touch
-
-- Author - [Kamil Myśliwiec](https://kamilmysliwiec.com)
-- Website - [https://nestjs.com](https://nestjs.com/)
-- Twitter - [@nestframework](https://twitter.com/nestframework)
-
+## List of test users
+    {
+      id: 1,
+      email: 'first@user.com',
+      username: 'FirstUser',
+      password: 'first',
+      token: 'first-user-token',
+    },
+    {
+      id: 2,
+      email: 'second@user.com',
+      username: 'SecondUser',
+      password: 'second',
+      token: 'second-user-token',
+    },
+    {
+      id: 3,
+      email: 'third@user.com',
+      username: 'ThirdUser',
+      password: 'third',
+      token: 'third-user-token',
+    },
 ## License
 
 Nest is [MIT licensed](LICENSE).
