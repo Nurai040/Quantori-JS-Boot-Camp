@@ -14,11 +14,14 @@ export class AuthGuard implements CanActivate {
   ): boolean | Promise<boolean> | Observable<boolean> {
     const request = context.switchToHttp().getRequest();
     const header = request.headers.authorization;
+    if (!header) {
+      throw new HttpException('Unauthorized', HttpStatus.UNAUTHORIZED);
+    }
     const bearer = header.split(' ')[0];
     const token = header.split(' ')[1];
 
-    if (bearer !== 'Bearer' && !token) {
-      throw new HttpException('Unauthorized', HttpStatus.FORBIDDEN);
+    if (bearer !== 'Bearer' || !token) {
+      throw new HttpException('Unauthorized', HttpStatus.UNAUTHORIZED);
     }
 
     request.token = token;
